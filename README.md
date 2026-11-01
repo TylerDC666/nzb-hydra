@@ -24,6 +24,8 @@ Choose German, English, Spanish, French, Russian or Arabic from the language sel
 
 ## Getting started
 
+See the [English Quick Start Guide](QUICKSTART.md) for Windows and Linux.
+
 1. Download the Windows ZIP from **Releases** and extract it completely.
 2. Run `NZB Hydra.exe`. **Keep `NZB Hydra.exe.config` in the same directory.**
 3. Paste an NZBLNK link and click **NZB erstellen** (Create NZB).
@@ -84,8 +86,9 @@ source/app.config   Runtime and DPI configuration
 source/app.manifest  Windows compatibility manifest
 source/build.ps1    Build script
 ANLEITUNG.txt        German quick-start guide
+QUICKSTART.md        English quick-start guide
 ```
 
 ## Project status
 
-Private project. No license is currently granted. The logo was created for this project using AI image generation; the earlier reference emblem is not included in this package.
+Public repository. No project license is currently granted. The logo was created for this project using AI image generation.

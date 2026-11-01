@@ -8,4 +8,4 @@ ENV QT_QPA_PLATFORM=offscreen
 RUN python -m unittest -v test_engine test_ui
 RUN pyinstaller --noconfirm --clean --name nzb-hydra --onedir --add-data 'translations.json:.' --add-data 'hydra.png:.' hydra.py
 RUN python collect_licenses.py && XDG_CONFIG_HOME=/tmp/hydra-smoke ./dist/nzb-hydra/nzb-hydra --smoke-test
-CMD ["sh", "-c", "tar -czf /out/NZB-Hydra-v2.0.0-Linux-x86_64.tar.gz -C dist nzb-hydra -C /build README-Linux.md THIRD-PARTY-NOTICES.txt"]
+CMD ["sh", "-c", "tar -czf /out/NZB-Hydra-v2.0.0-Linux-x86_64.tar.gz -C dist nzb-hydra -C /build README-Linux.md QUICKSTART.md THIRD-PARTY-NOTICES.txt"]

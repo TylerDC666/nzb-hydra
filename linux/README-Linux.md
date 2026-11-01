@@ -2,6 +2,8 @@
 
 Native Qt interface with German, English, Spanish, French, Russian and Arabic (right-to-left layout). Independent NZBIndex search, validation, standard NZB export, progress, cancellation and downloader handoff.
 
+See [English Quick Start](QUICKSTART.md).
+
 ## Portable Linux x86-64 build
 
 Extract `NZB-Hydra-v2.0.0-Linux-x86_64.tar.gz` into a permanent folder, then run `nzb-hydra/nzb-hydra`. Keep the entire folder together, including its hidden `_internal` resources. Python and Qt are included. No administrator installation is needed.
@@ -37,4 +39,4 @@ mkdir -p release
 docker run --rm -v "$PWD/release:/out" nzb-hydra-linux
 ```
 
-The container tests run without accessing the live search service. Desktop/browser handoff must also be checked on the target desktop. The application source remains private with no project license granted; see THIRD-PARTY-NOTICES.txt for bundled dependencies.
+The container tests run without accessing the live search service. Desktop/browser handoff must also be checked on the target desktop. The application source is publicly available with no project license granted; see THIRD-PARTY-NOTICES.txt for bundled dependencies.
