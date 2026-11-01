@@ -1,12 +1,12 @@
-# NZB Hydra — Quick Start
+# NZB Kestrel — Quick Start
 
 ## 1. Download and launch
 
-Download the package for your system from https://github.com/TylerDC666/nzb-hydra/releases/latest.
+Download the package for your system from https://github.com/TylerDC666/nzb-kestrel/releases/latest.
 
-**Windows:** Extract the Windows ZIP completely and run `NZB Hydra.exe`. Keep `NZB Hydra.exe.config` beside it. Requires Windows 10 Creators Update or later / Windows 11 and .NET Framework 4.8 or newer.
+**Windows:** Extract the Windows ZIP completely and run `NZB Kestrel.exe`. Keep `NZB Kestrel.exe.config` beside it. Requires Windows 10 Creators Update or later / Windows 11 and .NET Framework 4.8 or newer.
 
-**Linux x86-64:** Extract the Linux `.tar.gz` archive and run `nzb-hydra/nzb-hydra`. Keep the entire folder, including `_internal`. Python and Qt are included. Targets Debian 12 / Ubuntu 24.04 or newer (glibc 2.36+). See `README-Linux.md` in the package for desktop libraries and troubleshooting requirements.
+**Linux x86-64:** Extract the Linux `.tar.gz` archive and run `nzb-kestrel/nzb-kestrel`. Keep the entire folder, including `_internal`. Python and Qt are included. Targets Debian 12 / Ubuntu 24.04 or newer (glibc 2.36+). See `README-Linux.md` in the package for desktop libraries and troubleshooting requirements.
 
 ## 2. Choose English
 
@@ -22,9 +22,9 @@ Use the language selector at the top of the window and choose **English**. Your 
 
 Progress refers to NZB creation. Your downloader handles the actual content download and shows its own progress. A separate Usenet account may be required by your downloader.
 
-## 4. Open browser links with Hydra
+## 4. Open browser links with Kestrel
 
-Click **Associate browser links** once. Keep the application in the same location afterwards. Confirm your browser's request to open NZB Hydra if prompted. Browser links fill the input field; click **Create NZB** to start searching. On Linux, this requires `xdg-utils` and a compatible desktop environment.
+Click **Associate browser links** once. Keep the application in the same location afterwards. Confirm your browser's request to open NZB Kestrel if prompted. Browser links fill the input field; click **Create NZB** to start searching. On Linux, this requires `xdg-utils` and a compatible desktop environment.
 
 ## Troubleshooting
 
@@ -34,3 +34,7 @@ Click **Associate browser links** once. Keep the application in the same locatio
 - **Cancel:** Click **Cancel**. On Linux, an outstanding network read may take up to 20 seconds to stop.
 
 The search key is sent to NZBIndex. Exported NZBs include an archive password when the link supplies one. Settings do not store a link or password history. Validation does not guarantee article availability on your Usenet server.
+
+## Upgrading
+
+Existing settings from the former NZB Hydra application are imported automatically on first launch if no NZB Kestrel settings exist. Click **Associate browser links** again to point browser links at NZB Kestrel.

@@ -13,7 +13,7 @@ using System.Xml;
 using System.Xml.Linq;
 using Microsoft.Win32;
 
-namespace NZBHydra {
+namespace NZBKestrel {
     public class LinkInfo {
         public string Link, Title, Header, Password;
         public string[] Groups;
@@ -42,12 +42,12 @@ namespace NZBHydra {
         }
         TextBox input, folder, log;
         Label status, elapsed, title;
-        HydraProgress progress;
+        KestrelProgress progress;
         Button start, cancel, open, browse, paste, associate;
         CheckBox autoOpen;
         ComboBox languagePicker;
         ComboBox downloader; Button chooseDownloader; string downloaderPath = "";
-        readonly string settingsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "NZBHydra", "settings.xml");
+        readonly string settingsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "NZBKestrel", "settings.xml");
         CancellationTokenSource cancellation;
         readonly Stopwatch watch = new Stopwatch();
         readonly System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer { Interval = 250 };
@@ -55,7 +55,7 @@ namespace NZBHydra {
         readonly Color ink = Color.FromArgb(242, 238, 239), muted = Color.FromArgb(169, 155, 158), panel = Color.FromArgb(24, 21, 23), accent = Color.FromArgb(214, 42, 62);
         public MainForm(string initial) {
             SuspendLayout();
-            Text = "NZB Hydra"; Size = new Size(940, 900); MinimumSize = new Size(870, 840);
+            Text = "NZB Kestrel"; Size = new Size(940, 900); MinimumSize = new Size(870, 840);
             StartPosition = FormStartPosition.CenterScreen; BackColor = Color.Black; ForeColor = ink;
             Font = new Font("Segoe UI", 10); AutoScaleMode = AutoScaleMode.Dpi;
             var grid = new TableLayoutPanel { Dock = DockStyle.Fill, Padding = new Padding(28), ColumnCount = 1, RowCount = 13 };
@@ -65,9 +65,9 @@ namespace NZBHydra {
             var header = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 3, Margin = Padding.Empty };
             header.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 100)); header.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100)); header.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 190));
             var logo = new PictureBox { Dock = DockStyle.Fill, SizeMode = PictureBoxSizeMode.Zoom, Margin = new Padding(0, 2, 18, 2), BackColor = Color.Black };
-            using (var asset = typeof(MainForm).Assembly.GetManifestResourceStream("hydra.png")) using (var original = Image.FromStream(asset)) logo.Image = new Bitmap(original);
-            using (var iconStream = typeof(MainForm).Assembly.GetManifestResourceStream("hydra.ico")) Icon = new Icon(iconStream);
-            header.Controls.Add(logo, 0, 0); var name = Label("NZB HYDRA", 29, ink); name.Font = new Font("Segoe UI Semibold", 29, FontStyle.Bold); header.Controls.Add(name, 1, 0);
+            using (var asset = typeof(MainForm).Assembly.GetManifestResourceStream("kestrel.png")) using (var original = Image.FromStream(asset)) logo.Image = new Bitmap(original);
+            using (var iconStream = typeof(MainForm).Assembly.GetManifestResourceStream("kestrel.ico")) Icon = new Icon(iconStream);
+            header.Controls.Add(logo, 0, 0); var name = Label("NZB KESTREL", 29, ink); name.Font = new Font("Segoe UI Semibold", 29, FontStyle.Bold); header.Controls.Add(name, 1, 0);
             var languages = new TableLayoutPanel { Dock = DockStyle.Fill, RowCount = 2, ColumnCount = 1, Margin = new Padding(8,18,0,0), RightToLeft = RightToLeft.No };
             languages.RowStyles.Add(new RowStyle(SizeType.Absolute, 26)); languages.RowStyles.Add(new RowStyle(SizeType.Absolute, 38));
             languages.Controls.Add(Label("Sprache", 9, muted), 0, 0);
@@ -105,7 +105,7 @@ namespace NZBHydra {
             statusRow.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100)); statusRow.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 80));
             status = Label("Bereit", 11, ink); elapsed = Label("00:00", 10, muted); elapsed.TextAlign = ContentAlignment.MiddleRight;
             statusRow.Controls.Add(status, 0, 0); statusRow.Controls.Add(elapsed, 1, 0); grid.Controls.Add(statusRow, 0, 9);
-            progress = new HydraProgress { Dock = DockStyle.Fill, Height = 10, Margin = new Padding(0, 4, 0, 5), Style = ProgressBarStyle.Continuous }; grid.Controls.Add(progress, 0, 10);
+            progress = new KestrelProgress { Dock = DockStyle.Fill, Height = 10, Margin = new Padding(0, 4, 0, 5), Style = ProgressBarStyle.Continuous }; grid.Controls.Add(progress, 0, 10);
             log = Box(true); log.ReadOnly = true; log.ScrollBars = ScrollBars.Vertical; log.Font = new Font("Segoe UI", 10); log.Text = L.T("Hier erscheinen Suchstatus und Prüfergebnisse."); grid.Controls.Add(log, 0, 11);
             var footer = Flow(); associate = Button("Browser-Links zuordnen", 255, false); associate.Height = 26; associate.Font = new Font("Segoe UI", 8); associate.Click += (s,e) => Associate(); footer.Controls.Add(associate);
             grid.Controls.Add(footer, 0, 12);
@@ -123,7 +123,7 @@ namespace NZBHydra {
         Label Label(string text, float size, Color color) { return new Label { Text = L.T(text), Tag = text, Font = new Font("Segoe UI", size), ForeColor = color, Dock = DockStyle.Fill, TextAlign = ContentAlignment.MiddleLeft, AutoEllipsis = true, Margin = Padding.Empty }; }
         TextBox Box(bool multiline) { return new TextBox { Multiline = multiline, Dock = DockStyle.Fill, BackColor = panel, ForeColor = ink, BorderStyle = BorderStyle.FixedSingle, Margin = new Padding(0, 3, 0, 5) }; }
         FlowLayoutPanel Flow() { return new FlowLayoutPanel { Dock = DockStyle.Fill, WrapContents = false, Margin = Padding.Empty }; }
-        Button Button(string text, int width, bool primary) { var b = new HydraButton { Text = L.T(text), Tag = text, Width = width, Height = 34, BackColor = primary ? accent : panel, ForeColor = primary ? Color.White : ink, FlatStyle = FlatStyle.Flat, Margin = new Padding(0, 2, 8, 2), Cursor = Cursors.Hand, UseVisualStyleBackColor = false }; b.FlatAppearance.BorderColor = primary ? accent : Color.FromArgb(79, 43, 49); b.FlatAppearance.MouseOverBackColor = primary ? Color.FromArgb(240, 54, 77) : Color.FromArgb(49, 23, 30); return b; }
+        Button Button(string text, int width, bool primary) { var b = new KestrelButton { Text = L.T(text), Tag = text, Width = width, Height = 34, BackColor = primary ? accent : panel, ForeColor = primary ? Color.White : ink, FlatStyle = FlatStyle.Flat, Margin = new Padding(0, 2, 8, 2), Cursor = Cursors.Hand, UseVisualStyleBackColor = false }; b.FlatAppearance.BorderColor = primary ? accent : Color.FromArgb(79, 43, 49); b.FlatAppearance.MouseOverBackColor = primary ? Color.FromArgb(240, 54, 77) : Color.FromArgb(49, 23, 30); return b; }
         void TranslateControls(Control parent) {
             foreach (Control child in parent.Controls) {
                 if (child.Tag is string) child.Text = L.T((string)child.Tag);
@@ -149,10 +149,14 @@ namespace NZBHydra {
             else if (lastFile != null) status.Text = L.T("Fertig · NZB gespeichert");
             ResumeLayout(true);
         }
-        void ShowError(string message) { MessageBox.Show(this, message, "NZB Hydra", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+        void ShowError(string message) { MessageBox.Show(this, message, "NZB Kestrel", MessageBoxButtons.OK, MessageBoxIcon.Information); }
         void Shell(string path) { Process.Start(new ProcessStartInfo(path) { UseShellExecute = true }); }
         void LoadSettings() {
-            try { if (!File.Exists(settingsPath)) return; var doc = XDocument.Load(settingsPath); var root = doc.Root; L.Code = (string)root.Element("language") ?? "de";
+            try { if (!File.Exists(settingsPath)) {
+                string legacy = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "NZBHydra", "settings.xml");
+                if (File.Exists(legacy)) { Directory.CreateDirectory(Path.GetDirectoryName(settingsPath)); File.Copy(legacy, settingsPath); }
+            }
+            if (!File.Exists(settingsPath)) return; var doc = XDocument.Load(settingsPath); var root = doc.Root; L.Code = (string)root.Element("language") ?? "de";
                 string path = (string)root.Element("folder"); if (!string.IsNullOrEmpty(path)) folder.Text = path;
                 downloaderPath = (string)root.Element("downloader") ?? "";
                 if (File.Exists(downloaderPath)) { downloader.Items[1] = Path.GetFileNameWithoutExtension(downloaderPath); downloader.SelectedIndex = (string)root.Element("mode") == "custom" ? 1 : 0; }
@@ -176,9 +180,10 @@ namespace NZBHydra {
         }
         void Associate() {
             try {
-                using (var key = Registry.CurrentUser.CreateSubKey(@"Software\Classes\nzblnk")) { key.SetValue("", "NZB Hydra"); key.SetValue("URL Protocol", ""); }
+                using (var key = Registry.CurrentUser.CreateSubKey(@"Software\Classes\nzblnk")) { key.SetValue("", "NZB Kestrel"); key.SetValue("URL Protocol", ""); }
                 using (var key = Registry.CurrentUser.CreateSubKey(@"Software\Classes\nzblnk\shell\open\command")) key.SetValue("", "\"" + Application.ExecutablePath + "\" \"%1\"");
-                ShowError(L.T("NZBLNK-Links öffnen jetzt NZB Hydra. Bitte den Programmordner nicht verschieben. In Chrome gegebenenfalls das Öffnen bestätigen."));
+                using (var key = Registry.CurrentUser.CreateSubKey(@"Software\Classes\nzblnk\DefaultIcon")) key.SetValue("", "\"" + Application.ExecutablePath + "\",0");
+                ShowError(L.T("NZBLNK-Links öffnen jetzt NZB Kestrel. Bitte den Programmordner nicht verschieben. In Chrome gegebenenfalls das Öffnen bestätigen."));
             } catch (Exception ex) { ShowError(ex.Message); }
         }
         async Task StartJob() {
@@ -207,7 +212,7 @@ namespace NZBHydra {
     public static class Program {
         public static void TraceStart(string stage) {
             try {
-                string directory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "NZBHydra");
+                string directory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "NZBKestrel");
                 Directory.CreateDirectory(directory);
                 File.AppendAllText(Path.Combine(directory, "start-diagnose.txt"), DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff") + " | PID " + Process.GetCurrentProcess().Id + " | " + stage + Environment.NewLine);
             } catch { }
@@ -215,7 +220,7 @@ namespace NZBHydra {
         [STAThread] public static int Main(string[] args) {
             Application.EnableVisualStyles(); Application.SetCompatibleTextRenderingDefault(false);
             TraceStart("Start; Argumente=" + args.Length);
-            Application.ThreadException += (sender, eventArgs) => { TraceStart("UI-Fehler: " + eventArgs.Exception.GetType().FullName); MessageBox.Show(L.T("Hydra konnte die Aktion nicht abschließen. Bitte die Startdiagnose prüfen."), "NZB Hydra"); };
+            Application.ThreadException += (sender, eventArgs) => { TraceStart("UI-Fehler: " + eventArgs.Exception.GetType().FullName); MessageBox.Show(L.T("Kestrel konnte die Aktion nicht abschließen. Bitte die Startdiagnose prüfen."), "NZB Kestrel"); };
             AppDomain.CurrentDomain.UnhandledException += (sender, eventArgs) => TraceStart("Unbehandelter Fehler: " + eventArgs.ExceptionObject.GetType().FullName);
             if (args.Length > 0 && args[0] == "--self-test") {
                 string report = args.Length > 1 ? args[1] : Path.Combine(Engine.Base, "test-result.txt");

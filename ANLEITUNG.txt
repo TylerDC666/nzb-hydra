@@ -1,7 +1,7 @@
-﻿NZB Hydra 2.0 — eigenständige Windows-Anwendung
+NZB Kestrel 2.1 — eigenständige Windows-Anwendung
 ================================================
 
-Start: NZB Hydra.exe. EXE und NZB Hydra.exe.config zusammen aufbewahren. Benötigt .NET Framework
+Start: NZB Kestrel.exe. EXE und NZB Kestrel.exe.config zusammen aufbewahren. Benötigt .NET Framework
 4.8 oder neuer. Kein zusätzliches Programm, kein Python, kein Monkey Go.
 Quellcode und Build-Skript liegen im Ordner source.
 
@@ -37,7 +37,7 @@ Ob ein Downloader den Auftrag importiert, kann die Anwendung nicht prüfen.
 Die bestehende Windows-Dateizuordnung für .nzb wird nicht verändert.
 
 EINSTELLUNGEN
-Speicherort und Downloaderwahl: %LOCALAPPDATA%\NZBHydra\settings.xml.
+Speicherort und Downloaderwahl: %LOCALAPPDATA%\NZBKestrel\settings.xml.
 Keine gespeicherte Link- oder Passwort-Historie. Passwörter stehen in der NZB,
 nicht im Dateinamen oder Statusprotokoll. Vorhandene Dateien bleiben erhalten.
 Abbruch und Netzwerkzeitlimits sind eingebaut; jede Suche dauert maximal
@@ -54,7 +54,7 @@ Die NZB beschreibt Downloadsegmente; sie enthält nicht die Nutzdateien selbst.
 
 BUILD UND TESTS
 source\build.ps1 verwendet den mit Windows gelieferten Framework-C#-Compiler.
-"NZB Hydra.exe" --self-test "C:\Pfad\test-result.txt"
+"NZB Kestrel.exe" --self-test "C:\Pfad\test-result.txt"
 Schnittstellenquellen: https://nzbindex.com/ und https://api.nzbindex.com/api
 Die genutzte öffentliche Webschnittstelle /api/search unterscheidet sich von
 der separaten API-Domain, die laut Dokumentation einen API-Schlüssel benötigt.

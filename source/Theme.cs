@@ -2,13 +2,13 @@
 using System.Drawing;
 using System.Windows.Forms;
 [assembly: System.Runtime.Versioning.TargetFramework(".NETFramework,Version=v4.8", FrameworkDisplayName = ".NET Framework 4.8")]
-[assembly: System.Reflection.AssemblyTitle("NZB Hydra")]
-[assembly: System.Reflection.AssemblyProduct("NZB Hydra")]
-[assembly: System.Reflection.AssemblyDescription("NZB Hydra – NZBLNK und NZB-Dateien")]
-[assembly: System.Reflection.AssemblyVersion("2.0.0.0")]
-[assembly: System.Reflection.AssemblyFileVersion("2.0.0.0")]
-namespace NZBHydra {
-    public class HydraButton : Button {
+[assembly: System.Reflection.AssemblyTitle("NZB Kestrel")]
+[assembly: System.Reflection.AssemblyProduct("NZB Kestrel")]
+[assembly: System.Reflection.AssemblyDescription("NZB Kestrel – NZBLNK und NZB-Dateien")]
+[assembly: System.Reflection.AssemblyVersion("2.1.0.0")]
+[assembly: System.Reflection.AssemblyFileVersion("2.1.0.0")]
+namespace NZBKestrel {
+    public class KestrelButton : Button {
         protected override void OnPaint(PaintEventArgs e) {
             base.OnPaint(e);
             if (!Enabled) {
@@ -18,13 +18,13 @@ namespace NZBHydra {
             }
         }
     }
-    public class HydraProgress : Control {
+    public class KestrelProgress : Control {
         readonly Timer animation = new Timer { Interval = 35 };
         int position, value; ProgressBarStyle style;
         public int Value { get { return value; } set { this.value = Math.Max(0, Math.Min(100,value)); Invalidate(); } }
         public int MarqueeAnimationSpeed { get; set; }
         public ProgressBarStyle Style { get { return style; } set { style=value; animation.Enabled = value == ProgressBarStyle.Marquee; Invalidate(); } }
-        public HydraProgress() { SetStyle(ControlStyles.UserPaint | ControlStyles.AllPaintingInWmPaint | ControlStyles.OptimizedDoubleBuffer, true); animation.Tick += (s,e) => { position = (position + 9) % Math.Max(1, Width + Width/4); Invalidate(); }; }
+        public KestrelProgress() { SetStyle(ControlStyles.UserPaint | ControlStyles.AllPaintingInWmPaint | ControlStyles.OptimizedDoubleBuffer, true); animation.Tick += (s,e) => { position = (position + 9) % Math.Max(1, Width + Width/4); Invalidate(); }; }
         protected override void OnPaint(PaintEventArgs e) {
             e.Graphics.Clear(Color.FromArgb(35,21,25));
             using (var brush = new SolidBrush(Color.FromArgb(214,42,62))) {

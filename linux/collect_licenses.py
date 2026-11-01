@@ -4,7 +4,7 @@ import importlib.metadata
 import shutil
 import sysconfig
 
-target = Path('dist/nzb-hydra/third-party-licenses')
+target = Path('dist/nzb-kestrel/third-party-licenses')
 target.mkdir(parents=True, exist_ok=True)
 shutil.copytree('upstream-licenses', target / 'Qt-PySide', dirs_exist_ok=True)
 for name in ('PySide6-Essentials', 'shiboken6', 'pyinstaller'):

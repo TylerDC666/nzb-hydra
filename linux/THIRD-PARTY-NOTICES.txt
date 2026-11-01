@@ -1,4 +1,4 @@
-NZB Hydra has no project license granted. Third-party components retain their own licenses.
+NZB Kestrel has no project license granted. Third-party components retain their own licenses.
 
 Linux distribution includes Python, PySide6-Essentials/Shiboken6, Qt 6 and PyInstaller runtime components, plus their runtime dependencies.
 Python: https://docs.python.org/3/license.html
@@ -6,4 +6,4 @@ Qt for Python: https://doc.qt.io/qtforpython-6/licenses.html
 Qt: https://www.qt.io/licensing/open-source-lgpl-obligations
 PyInstaller: https://pyinstaller.org/en/stable/license.html (GPL with distribution exception)
 
-Qt/PySide are dynamically linked in the _internal folder; these libraries may be replaced with compatible modified versions. Reverse engineering for debugging modifications to those libraries is not restricted by this project. Upstream source: https://download.qt.io/official_releases/QtForPython/pyside6/ and https://download.qt.io/official_releases/qt/ . Bundled license files are retained in the distribution. Additional upstream license and attribution texts for Qt 6.8.3 and PySide 6.8.3 are in third-party-licenses/Qt-PySide. No license is granted for NZB Hydra's own source merely by including these dependency notices.
+Qt/PySide are dynamically linked in the _internal folder; these libraries may be replaced with compatible modified versions. Reverse engineering for debugging modifications to those libraries is not restricted by this project. Upstream source: https://download.qt.io/official_releases/QtForPython/pyside6/ and https://download.qt.io/official_releases/qt/ . Bundled license files are retained in the distribution. Additional upstream license and attribution texts for Qt 6.8.3 and PySide 6.8.3 are in third-party-licenses/Qt-PySide. No license is granted for NZB Kestrel's own source merely by including these dependency notices.

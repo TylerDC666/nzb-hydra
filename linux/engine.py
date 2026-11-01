@@ -140,7 +140,7 @@ def save(data, title, directory, check=lambda: None):
     name = re.sub(r'[<>:"/\\|?*\x00-\x1f]', '_', title).strip().rstrip('.')
     # Leave enough bytes for a numeric suffix on filesystems with 255-byte names.
     name = name.encode('utf-8')[:180].decode('utf-8', 'ignore') or 'Download'
-    fd, temporary = tempfile.mkstemp(prefix='.nzb-hydra-', dir=directory)
+    fd, temporary = tempfile.mkstemp(prefix='.nzb-kestrel-', dir=directory)
     try:
         with os.fdopen(fd, 'wb') as stream:
             stream.write(data)
@@ -175,7 +175,7 @@ def run(link, directory, stop, progress):
             raise TimeoutError('Die Suche wurde nach drei Minuten beendet. Bitte erneut versuchen.')
     def fetch(url, show=False):
         check()
-        req = urllib.request.Request(url, headers={'User-Agent': 'NZBHydra/2.0'})
+        req = urllib.request.Request(url, headers={'User-Agent': 'NZBKestrel/2.1'})
         with urllib.request.build_opener(SafeRedirect()).open(req, timeout=min(20, max(1, deadline-time.monotonic()))) as response:
             length = int(response.headers.get('Content-Length', '0'))
             if length > LIMIT:

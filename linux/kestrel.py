@@ -1,4 +1,4 @@
-"""NZB Hydra Linux desktop application."""
+"""NZB Kestrel Linux desktop application."""
 import json
 import os
 from pathlib import Path
@@ -33,13 +33,13 @@ def register():
         command = desktop_quote(sys.executable) + ' ' + desktop_quote(Path(__file__).resolve())
     appdir = Path(os.environ.get('XDG_DATA_HOME', str(Path.home()/'.local/share'))) / 'applications'
     appdir.mkdir(parents=True, exist_ok=True)
-    icon = BASE / 'hydra.png'
-    content = ('[Desktop Entry]\nType=Application\nName=NZB Hydra\n'
+    icon = BASE / 'kestrel.png'
+    content = ('[Desktop Entry]\nType=Application\nName=NZB Kestrel\n'
                'Comment=Create NZB files from NZBLNK links\nTerminal=false\n'
                f'Exec={command} %u\nIcon={icon}\n'
                'MimeType=x-scheme-handler/nzblnk;\nCategories=Network;\n')
-    (appdir/'nzb-hydra.desktop').write_text(content, encoding='utf-8')
-    subprocess.run(['xdg-mime', 'default', 'nzb-hydra.desktop', 'x-scheme-handler/nzblnk'], check=True, timeout=15)
+    (appdir/'nzb-kestrel.desktop').write_text(content, encoding='utf-8')
+    subprocess.run(['xdg-mime', 'default', 'nzb-kestrel.desktop', 'x-scheme-handler/nzblnk'], check=True, timeout=15)
 
 class Worker(QThread):
     progress = Signal(str, int)
@@ -65,7 +65,14 @@ class Worker(QThread):
 class Window(QWidget):
     def __init__(self, initial=''):
         super().__init__()
-        self.settings_path = Path(os.environ.get('XDG_CONFIG_HOME', str(Path.home()/'.config'))) / 'nzb-hydra/settings.json'
+        self.settings_path = Path(os.environ.get('XDG_CONFIG_HOME', str(Path.home()/'.config'))) / 'nzb-kestrel/settings.json'
+        legacy = self.settings_path.parent.parent / 'nzb-hydra/settings.json'
+        if not self.settings_path.exists() and legacy.is_file():
+            try:
+                self.settings_path.parent.mkdir(parents=True, exist_ok=True)
+                self.settings_path.write_bytes(legacy.read_bytes())
+            except OSError:
+                pass
         try:
             self.settings = json.loads(self.settings_path.read_text(encoding='utf-8'))
             if not isinstance(self.settings, dict):
@@ -79,8 +86,8 @@ class Window(QWidget):
         self.last = ''
         self.downloader = self.settings.get('downloader', '')
         self.bound = []
-        self.setWindowTitle('NZB Hydra')
-        self.setWindowIcon(QIcon(str(BASE/'hydra.png')))
+        self.setWindowTitle('NZB Kestrel')
+        self.setWindowIcon(QIcon(str(BASE/'kestrel.png')))
         self.resize(960, 800)
         self.setMinimumSize(760, 680)
         self.setStyleSheet('''
@@ -99,9 +106,9 @@ class Window(QWidget):
         layout.setSpacing(12)
         header = QHBoxLayout()
         logo = QLabel()
-        logo.setPixmap(QPixmap(str(BASE/'hydra.png')).scaled(90,90,Qt.KeepAspectRatio,Qt.SmoothTransformation))
+        logo.setPixmap(QPixmap(str(BASE/'kestrel.png')).scaled(90,90,Qt.KeepAspectRatio,Qt.SmoothTransformation))
         header.addWidget(logo)
-        brand = QLabel('NZB HYDRA')
+        brand = QLabel('NZB KESTREL')
         brand.setStyleSheet('font-size:32px;font-weight:700;')
         header.addWidget(brand, 1)
         header.addWidget(self.label('Sprache'))
@@ -214,7 +221,7 @@ class Window(QWidget):
             self.apply_language()
 
     def error(self, text):
-        QMessageBox.warning(self, 'NZB Hydra', self.t(text))
+        QMessageBox.warning(self, 'NZB Kestrel', self.t(text))
 
     def search(self):
         try:
@@ -295,7 +302,7 @@ class Window(QWidget):
     def associate(self):
         try:
             register()
-            QMessageBox.information(self, 'NZB Hydra', self.t('NZBLNK-Links öffnen jetzt NZB Hydra. Bitte den Programmordner nicht verschieben. In Chrome gegebenenfalls das Öffnen bestätigen.'))
+            QMessageBox.information(self, 'NZB Kestrel', self.t('NZBLNK-Links öffnen jetzt NZB Kestrel. Bitte den Programmordner nicht verschieben. In Chrome gegebenenfalls das Öffnen bestätigen.'))
         except (OSError, subprocess.SubprocessError) as exc:
             self.error(type(exc).__name__)
 
@@ -321,7 +328,7 @@ if __name__ == '__main__':
             app.processEvents()
             assert window.start.text() == tr('NZB erstellen', code)
             assert (window.layoutDirection() == Qt.RightToLeft) == (code == 'ar')
-            assert not QPixmap(str(BASE/'hydra.png')).isNull()
+            assert not QPixmap(str(BASE/'kestrel.png')).isNull()
         print('PASS: packaged Linux executable, six languages, RTL, logo')
         window.close()
     else:

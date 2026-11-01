@@ -215,13 +215,13 @@
     "NZB сохранён, но открыть его не удалось: ",
     "تم حفظ NZB، لكن تعذر فتحه: "
   ],
-  "NZBLNK-Links öffnen jetzt NZB Hydra. Bitte den Programmordner nicht verschieben. In Chrome gegebenenfalls das Öffnen bestätigen.": [
-    "NZBLNK-Links öffnen jetzt NZB Hydra. Bitte den Programmordner nicht verschieben. In Chrome gegebenenfalls das Öffnen bestätigen.",
-    "NZBLNK links now open NZB Hydra. Keep the app in its current folder. Confirm opening in Chrome if prompted.",
-    "Los enlaces NZBLNK ahora abren NZB Hydra. No muevas la carpeta de la aplicación. Confirma la apertura en Chrome si se solicita.",
-    "Les liens NZBLNK ouvrent maintenant NZB Hydra. Ne déplacez pas le dossier de l’application. Confirmez l’ouverture dans Chrome si nécessaire.",
-    "Ссылки NZBLNK теперь открываются в NZB Hydra. Не перемещайте папку приложения. При запросе подтвердите открытие в Chrome.",
-    "تفتح روابط NZBLNK الآن برنامج NZB Hydra. لا تنقل مجلد التطبيق. أكّد الفتح في Chrome عند الطلب."
+  "NZBLNK-Links öffnen jetzt NZB Kestrel. Bitte den Programmordner nicht verschieben. In Chrome gegebenenfalls das Öffnen bestätigen.": [
+    "NZBLNK-Links öffnen jetzt NZB Kestrel. Bitte den Programmordner nicht verschieben. In Chrome gegebenenfalls das Öffnen bestätigen.",
+    "NZBLNK links now open NZB Kestrel. Keep the app in its current folder. Confirm opening in Chrome if prompted.",
+    "Los enlaces NZBLNK ahora abren NZB Kestrel. No muevas la carpeta de la aplicación. Confirma la apertura en Chrome si se solicita.",
+    "Les liens NZBLNK ouvrent maintenant NZB Kestrel. Ne déplacez pas le dossier de l’application. Confirmez l’ouverture dans Chrome si nécessaire.",
+    "Ссылки NZBLNK теперь открываются в NZB Kestrel. Не перемещайте папку приложения. При запросе подтвердите открытие в Chrome.",
+    "تفتح روابط NZBLNK الآن برنامج NZB Kestrel. لا تنقل مجلد التطبيق. أكّد الفتح في Chrome عند الطلب."
   ],
   "Bitte einen absoluten Speicherpfad auswählen.": [
     "Bitte einen absoluten Speicherpfad auswählen.",
@@ -279,13 +279,13 @@
     "Не удалось создать NZB",
     "تعذر إنشاء NZB"
   ],
-  "Hydra konnte die Aktion nicht abschließen. Bitte die Startdiagnose prüfen.": [
-    "Hydra konnte die Aktion nicht abschließen. Bitte die Startdiagnose prüfen.",
-    "Hydra could not complete the action. Check the startup log.",
-    "Hydra no pudo completar la acción. Revisa el registro de inicio.",
-    "Hydra n’a pas pu terminer l’action. Consultez le journal de démarrage.",
-    "Hydra не удалось завершить действие. Проверьте журнал запуска.",
-    "تعذر على Hydra إكمال العملية. راجع سجل بدء التشغيل."
+  "Kestrel konnte die Aktion nicht abschließen. Bitte die Startdiagnose prüfen.": [
+    "Kestrel konnte die Aktion nicht abschließen. Bitte die Startdiagnose prüfen.",
+    "Kestrel could not complete the action. Check the startup log.",
+    "Kestrel no pudo completar la acción. Revisa el registro de inicio.",
+    "Kestrel n’a pas pu terminer l’action. Consultez le journal de démarrage.",
+    "Kestrel не удалось завершить действие. Проверьте журнал запуска.",
+    "تعذر على Kestrel إكمال العملية. راجع سجل بدء التشغيل."
   ],
   "Bitte genau einen vollständigen NZBLNK-Link einfügen.": [
     "Bitte genau einen vollständigen NZBLNK-Link einfügen.",

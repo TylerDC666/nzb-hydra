@@ -12,7 +12,7 @@ using System.Web.Script.Serialization;
 using System.Xml;
 using System.Xml.Linq;
 
-namespace NZBHydra {
+namespace NZBKestrel {
     // Independent implementation against NZBIndex's public web endpoints and NZB XML.
     public static class Engine {
         public static readonly string Base = AppDomain.CurrentDomain.BaseDirectory;
@@ -29,7 +29,7 @@ namespace NZBHydra {
             token.ThrowIfCancellationRequested();
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             var request = (HttpWebRequest)WebRequest.Create(url);
-            request.Method = "GET"; request.UserAgent = "NZBHydra/2.0";
+            request.Method = "GET"; request.UserAgent = "NZBKestrel/2.1";
             request.Timeout = 30000; request.ReadWriteTimeout = 30000;
             request.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
             const int limit = 64 * 1024 * 1024;

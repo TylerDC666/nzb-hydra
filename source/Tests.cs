@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Xml.Linq;
 
-namespace NZBHydra {
+namespace NZBKestrel {
     public static class Tests {
         static void Assert(bool condition, string name) { if (!condition) throw new Exception(name); }
         static void Reject(Action action, string name) { bool rejected = false; try { action(); } catch { rejected = true; } Assert(rejected, name); }
@@ -41,7 +41,7 @@ namespace NZBHydra {
             Reject(() => Engine.CheckNzb(Engine.ReadNzb(Encoding.UTF8.GetBytes(xml.Replace("[001/001]", "[001/002]"))), null, s => {}, CancellationToken.None), "Missing file");
             Reject(() => Engine.CheckNzb(doc, "wrong", s => {}, CancellationToken.None), "Wrong header");
             Assert(Engine.SafeName("CON.txt") == "_CON.txt" && !Engine.SafeName("../../bad").Contains('/'), "Safe filenames");
-            string folder = Path.Combine(Path.GetTempPath(), "NZBHydra-Test-" + Guid.NewGuid().ToString("N"));
+            string folder = Path.Combine(Path.GetTempPath(), "NZBKestrel-Test-" + Guid.NewGuid().ToString("N"));
             try {
                 string one = Engine.Save(doc, "Example", folder, CancellationToken.None), two = Engine.Save(doc, "Example", folder, CancellationToken.None);
                 Assert(one != two && File.Exists(one) && File.Exists(two), "Do not overwrite");

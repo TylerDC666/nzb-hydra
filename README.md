@@ -1,6 +1,6 @@
-<p align="center"><img src="assets/hydra.png" width="170" alt="NZB Hydra"></p>
+<p align="center"><img src="assets/kestrel.png" width="170" alt="NZB Kestrel"></p>
 
-# NZB Hydra
+# NZB Kestrel
 
 A Windows and Linux app that turns NZBLNK links into validated NZB files, with a black-and-red interface, live progress, and support for your preferred NZB downloader.
 
@@ -27,7 +27,7 @@ Choose German, English, Spanish, French, Russian or Arabic from the language sel
 See the [English Quick Start Guide](QUICKSTART.md) for Windows and Linux.
 
 1. Download the Windows ZIP from **Releases** and extract it completely.
-2. Run `NZB Hydra.exe`. **Keep `NZB Hydra.exe.config` in the same directory.**
+2. Run `NZB Kestrel.exe`. **Keep `NZB Kestrel.exe.config` in the same directory.**
 3. Paste an NZBLNK link and click **NZB erstellen** (Create NZB).
 
 Click **Browser-Links zuordnen** (Associate browser links) to register the application for `nzblnk:` links in your Windows account. Keep the app in that location after registration. Your browser may ask for permission to open the app. Browser links populate the input field; searching starts when you click **NZB erstellen**.
@@ -50,7 +50,7 @@ NZBIndex is currently the only supported indexer. Direct NNTP searching is not i
 
 The search key from an NZBLNK link is sent to `nzbindex.com`. The application retrieves the corresponding NZB and processes it locally. It does not download the underlying content from Usenet.
 
-Settings are stored in `%LOCALAPPDATA%\NZBHydra\settings.xml`. The local `start-diagnose.txt` startup log records timestamps, process IDs, argument counts, startup/shutdown status, and exception types when applicable. It does not record full links or passwords. Archive passwords are included in exported NZB metadata.
+Settings are stored in `%LOCALAPPDATA%\NZBKestrel\settings.xml`. The local `start-diagnose.txt` startup log records timestamps, process IDs, argument counts, startup/shutdown status, and exception types when applicable. It does not record full links or passwords. Archive passwords are included in exported NZB metadata.
 
 ## Building from source
 
@@ -65,8 +65,8 @@ The build uses the .NET Framework C# compiler at `%WINDIR%\Microsoft.NET\Framewo
 Run the offline self-tests:
 
 ```powershell
-$report = Join-Path $env:TEMP 'NZB-Hydra-Test.txt'
-Start-Process -FilePath '.\bin\NZB Hydra.exe' -ArgumentList ('--self-test "' + $report + '"') -Wait
+$report = Join-Path $env:TEMP 'NZB-Kestrel-Test.txt'
+Start-Process -FilePath '.\bin\NZB Kestrel.exe' -ArgumentList ('--self-test "' + $report + '"') -Wait
 Get-Content $report
 ```
 
@@ -76,7 +76,7 @@ Tests cover six-language controls, Arabic layout, link parsing, result selection
 
 ```text
 assets/             Logo and Windows icon
-source/NZBHydra.cs   Interface, link parsing, and application entry point
+source/NZBKestrel.cs   Interface, link parsing, and application entry point
 source/Engine.cs     HTTP search, NZB validation, and export
 source/Theme.cs      Styling and assembly metadata
 source/Localization.cs Six-language Windows translations
