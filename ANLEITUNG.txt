@@ -1,0 +1,64 @@
+﻿NZB Hydra 2.0 — eigenständige Windows-Anwendung
+================================================
+
+Start: NZB Hydra.exe. EXE und NZB Hydra.exe.config zusammen aufbewahren. Benötigt .NET Framework
+4.8 oder neuer. Kein zusätzliches Programm, kein Python, kein Monkey Go.
+Quellcode und Build-Skript liegen im Ordner source.
+
+1. Vollständigen NZBLNK-Link einfügen (nzblnk:? oder nzblnk://?).
+2. Speicherort wählen.
+3. Optional automatische Übergabe aktivieren und Downloader auswählen.
+4. "NZB erstellen" anklicken.
+
+Eigene Suchanbindung: öffentliche NZBIndex-Webschnittstelle. Gesucht wird nach
+dem Schlüssel h, unter Berücksichtigung der Gruppe g. Die Anwendung prüft
+Subjects, Dateizahl, Segmentnummern, Lücken und doppelte Segmente. Sie schreibt
+eine UTF-8-NZB mit Standard-Namensraum, sortierten Segmenten sowie Titel und
+Passwort als Metadaten. Der Suchschlüssel wird an NZBIndex übermittelt.
+
+FORTSCHRITT
+Die Suche zeigt einen Aktivitätsbalken. Bei bekannter Antwortgröße zeigt die
+NZB-Übertragung ihren Prozentfortschritt. Die Dateiprüfung zeigt den Anteil
+geprüfter Dateien. Prozentwerte gelten für die jeweils angezeigte Phase.
+Der eigentliche Inhaltsdownload und dessen Fortschritt gehören zum Downloader.
+
+DOWNLOADER
+- Windows-Standardprogramm: verwendet die vorhandene Zuordnung für .nzb.
+- Ausgewähltes Programm: startet eine EXE mit dem NZB-Pfad als einzelnem
+  Argument. Der Downloader muss diesen Aufruf unterstützen.
+- Ohne automatische Übergabe: NZB manuell in jeden NZB-kompatiblen Downloader
+  importieren oder in dessen überwachten Ordner speichern, auch auf anderen
+  Geräten über einen passenden freigegebenen Ordner.
+
+Das Dateiformat ist downloaderunabhängig. Nicht jedes Programm akzeptiert
+Dateipfade beim Programmstart; für solche Programme den Dateiimport verwenden.
+API-Fernsteuerung von SABnzbd, NZBGet oder Cloud-Diensten ist nicht enthalten.
+Ob ein Downloader den Auftrag importiert, kann die Anwendung nicht prüfen.
+Die bestehende Windows-Dateizuordnung für .nzb wird nicht verändert.
+
+EINSTELLUNGEN
+Speicherort und Downloaderwahl: %LOCALAPPDATA%\NZBHydra\settings.xml.
+Keine gespeicherte Link- oder Passwort-Historie. Passwörter stehen in der NZB,
+nicht im Dateinamen oder Statusprotokoll. Vorhandene Dateien bleiben erhalten.
+Abbruch und Netzwerkzeitlimits sind eingebaut; jede Suche dauert maximal
+drei Minuten. "Browser-Links zuordnen" registriert die aktuelle EXE für nzblnk.
+Ein Browser-Link füllt das Eingabefeld; die Suche startet erst durch deinen Klick.
+Nach Registrierung die EXE nicht verschieben oder die Zuordnung erneut setzen.
+
+GRENZEN
+Diese Version unterstützt NZBIndex, keine weiteren Indexer und keine direkte
+NNTP-Serversuche. Nicht jeder Beitrag ist dort auffindbar. Der Suchdienst kann
+seine Schnittstelle ändern. Die NZB-Prüfung garantiert keine Verfügbarkeit der
+Artikel auf deinem Usenet-Server und keine erfolgreiche Archiv-Entpackung.
+Die NZB beschreibt Downloadsegmente; sie enthält nicht die Nutzdateien selbst.
+
+BUILD UND TESTS
+source\build.ps1 verwendet den mit Windows gelieferten Framework-C#-Compiler.
+"NZB Hydra.exe" --self-test "C:\Pfad\test-result.txt"
+Schnittstellenquellen: https://nzbindex.com/ und https://api.nzbindex.com/api
+Die genutzte öffentliche Webschnittstelle /api/search unterscheidet sich von
+der separaten API-Domain, die laut Dokumentation einen API-Schlüssel benötigt.
+
+SPRACHEN
+Oben rechts: Deutsch, Englisch, Spanisch, Französisch, Russisch oder Arabisch.
+Die Auswahl wird gespeichert. Arabisch verwendet ein Layout von rechts nach links.

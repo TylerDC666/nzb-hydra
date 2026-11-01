@@ -1,0 +1,610 @@
+{
+  "NZBLNK-LINK": [
+    "NZBLNK-LINK",
+    "NZBLNK LINK",
+    "ENLACE NZBLNK",
+    "LIEN NZBLNK",
+    "ССЫЛКА NZBLNK",
+    "رابط NZBLNK"
+  ],
+  "SPEICHERORT": [
+    "SPEICHERORT",
+    "SAVE LOCATION",
+    "CARPETA DE DESTINO",
+    "DOSSIER DE DESTINATION",
+    "ПАПКА СОХРАНЕНИЯ",
+    "مجلد الحفظ"
+  ],
+  "Aus Zwischenablage": [
+    "Aus Zwischenablage",
+    "Paste from clipboard",
+    "Pegar del portapapeles",
+    "Coller du presse-papiers",
+    "Вставить из буфера",
+    "لصق من الحافظة"
+  ],
+  "Bereit für deinen Link": [
+    "Bereit für deinen Link",
+    "Ready for your link",
+    "Listo para tu enlace",
+    "Prêt pour votre lien",
+    "Вставьте ссылку",
+    "جاهز لاستقبال الرابط"
+  ],
+  "Auswählen": [
+    "Auswählen",
+    "Browse",
+    "Examinar",
+    "Parcourir",
+    "Обзор",
+    "استعراض"
+  ],
+  "Ordner für NZB-Dateien": [
+    "Ordner für NZB-Dateien",
+    "Folder for NZB files",
+    "Carpeta para archivos NZB",
+    "Dossier des fichiers NZB",
+    "Папка для файлов NZB",
+    "مجلد ملفات NZB"
+  ],
+  "Nach dem Speichern an den Downloader übergeben": [
+    "Nach dem Speichern an den Downloader übergeben",
+    "Send to downloader after saving",
+    "Enviar al descargador después de guardar",
+    "Envoyer au logiciel de téléchargement après enregistrement",
+    "Передать загрузчику после сохранения",
+    "إرسال إلى برنامج التنزيل بعد الحفظ"
+  ],
+  "Windows-Standardprogramm für .nzb": [
+    "Windows-Standardprogramm für .nzb",
+    "Windows default app for .nzb",
+    "Aplicación predeterminada para .nzb",
+    "Application Windows par défaut pour .nzb",
+    "Приложение Windows для .nzb",
+    "تطبيق Windows الافتراضي لملفات .nzb"
+  ],
+  "Ausgewähltes Programm": [
+    "Ausgewähltes Programm",
+    "Selected application",
+    "Aplicación seleccionada",
+    "Application sélectionnée",
+    "Выбранное приложение",
+    "التطبيق المحدد"
+  ],
+  "Downloader auswählen …": [
+    "Downloader auswählen …",
+    "Choose downloader …",
+    "Elegir descargador …",
+    "Choisir le logiciel …",
+    "Выбрать загрузчик …",
+    "اختيار برنامج التنزيل …"
+  ],
+  "NZB-Downloader auswählen": [
+    "NZB-Downloader auswählen",
+    "Choose NZB downloader",
+    "Elegir descargador NZB",
+    "Choisir un logiciel NZB",
+    "Выберите загрузчик NZB",
+    "اختيار برنامج تنزيل NZB"
+  ],
+  "NZB erstellen": [
+    "NZB erstellen",
+    "Create NZB",
+    "Crear NZB",
+    "Créer le NZB",
+    "Создать NZB",
+    "إنشاء NZB"
+  ],
+  "Abbrechen": [
+    "Abbrechen",
+    "Cancel",
+    "Cancelar",
+    "Annuler",
+    "Отмена",
+    "إلغاء"
+  ],
+  "Im Downloader öffnen": [
+    "Im Downloader öffnen",
+    "Open in downloader",
+    "Abrir en el descargador",
+    "Ouvrir dans le logiciel",
+    "Открыть в загрузчике",
+    "فتح في برنامج التنزيل"
+  ],
+  "Ordner öffnen": [
+    "Ordner öffnen",
+    "Open folder",
+    "Abrir carpeta",
+    "Ouvrir le dossier",
+    "Открыть папку",
+    "فتح المجلد"
+  ],
+  "Der Ordner existiert noch nicht.": [
+    "Der Ordner existiert noch nicht.",
+    "The folder does not exist yet.",
+    "La carpeta todavía no existe.",
+    "Le dossier n’existe pas encore.",
+    "Папка ещё не существует.",
+    "المجلد غير موجود بعد."
+  ],
+  "Wird abgebrochen …": [
+    "Wird abgebrochen …",
+    "Cancelling …",
+    "Cancelando …",
+    "Annulation …",
+    "Отмена …",
+    "جارٍ الإلغاء …"
+  ],
+  "Bereit": [
+    "Bereit",
+    "Ready",
+    "Listo",
+    "Prêt",
+    "Готово",
+    "جاهز"
+  ],
+  "Hier erscheinen Suchstatus und Prüfergebnisse.": [
+    "Hier erscheinen Suchstatus und Prüfergebnisse.",
+    "Search status and validation results appear here.",
+    "Aquí aparecen el estado de búsqueda y los resultados de verificación.",
+    "L’état de la recherche et les résultats de validation s’affichent ici.",
+    "Здесь отображаются ход поиска и результаты проверки.",
+    "تظهر هنا حالة البحث ونتائج التحقق."
+  ],
+  "Browser-Links zuordnen": [
+    "Browser-Links zuordnen",
+    "Associate browser links",
+    "Asociar enlaces del navegador",
+    "Associer les liens du navigateur",
+    "Связать ссылки браузера",
+    "ربط روابط المتصفح"
+  ],
+  "Vollständigen NZBLNK-Link einfügen": [
+    "Vollständigen NZBLNK-Link einfügen",
+    "Paste a complete NZBLNK link",
+    "Pega un enlace NZBLNK completo",
+    "Collez un lien NZBLNK complet",
+    "Вставьте полную ссылку NZBLNK",
+    "ألصق رابط NZBLNK كاملًا"
+  ],
+  "Suche wird beendet. Danach kannst du das Fenster schließen.": [
+    "Suche wird beendet. Danach kannst du das Fenster schließen.",
+    "Stopping the search. You can close the window afterwards.",
+    "Deteniendo la búsqueda. Después podrás cerrar la ventana.",
+    "Arrêt de la recherche. Vous pourrez ensuite fermer la fenêtre.",
+    "Поиск останавливается. После этого можно закрыть окно.",
+    "جارٍ إيقاف البحث. يمكنك إغلاق النافذة بعد ذلك."
+  ],
+  "Einstellungen konnten nicht geladen werden. Standardwerte aktiv.": [
+    "Einstellungen konnten nicht geladen werden. Standardwerte aktiv.",
+    "Could not load settings. Using defaults.",
+    "No se pudo cargar la configuración. Se usan los valores predeterminados.",
+    "Impossible de charger les paramètres. Valeurs par défaut utilisées.",
+    "Не удалось загрузить настройки. Используются значения по умолчанию.",
+    "تعذر تحميل الإعدادات. تُستخدم الإعدادات الافتراضية."
+  ],
+  "Die NZB-Datei ist nicht mehr vorhanden.": [
+    "Die NZB-Datei ist nicht mehr vorhanden.",
+    "The NZB file no longer exists.",
+    "El archivo NZB ya no existe.",
+    "Le fichier NZB n’existe plus.",
+    "Файл NZB больше не существует.",
+    "ملف NZB لم يعد موجودًا."
+  ],
+  "Bitte zuerst eine gültige Downloader-Programmdatei auswählen.": [
+    "Bitte zuerst eine gültige Downloader-Programmdatei auswählen.",
+    "Choose a valid downloader executable first.",
+    "Primero elige un ejecutable válido del descargador.",
+    "Choisissez d’abord un exécutable valide.",
+    "Сначала выберите исполняемый файл загрузчика.",
+    "اختر أولًا ملفًا تنفيذيًا صالحًا لبرنامج التنزيل."
+  ],
+  "NZB an den ausgewählten Downloader übergeben": [
+    "NZB an den ausgewählten Downloader übergeben",
+    "NZB sent to the selected downloader",
+    "NZB enviado al descargador seleccionado",
+    "NZB transmis au logiciel sélectionné",
+    "NZB передан выбранному загрузчику",
+    "تم إرسال NZB إلى برنامج التنزيل المحدد"
+  ],
+  "NZB gespeichert, aber Öffnen fehlgeschlagen: ": [
+    "NZB gespeichert, aber Öffnen fehlgeschlagen: ",
+    "NZB saved, but opening failed: ",
+    "NZB guardado, pero no se pudo abrir: ",
+    "NZB enregistré, mais l’ouverture a échoué : ",
+    "NZB сохранён, но открыть его не удалось: ",
+    "تم حفظ NZB، لكن تعذر فتحه: "
+  ],
+  "NZBLNK-Links öffnen jetzt NZB Hydra. Bitte den Programmordner nicht verschieben. In Chrome gegebenenfalls das Öffnen bestätigen.": [
+    "NZBLNK-Links öffnen jetzt NZB Hydra. Bitte den Programmordner nicht verschieben. In Chrome gegebenenfalls das Öffnen bestätigen.",
+    "NZBLNK links now open NZB Hydra. Keep the app in its current folder. Confirm opening in Chrome if prompted.",
+    "Los enlaces NZBLNK ahora abren NZB Hydra. No muevas la carpeta de la aplicación. Confirma la apertura en Chrome si se solicita.",
+    "Les liens NZBLNK ouvrent maintenant NZB Hydra. Ne déplacez pas le dossier de l’application. Confirmez l’ouverture dans Chrome si nécessaire.",
+    "Ссылки NZBLNK теперь открываются в NZB Hydra. Не перемещайте папку приложения. При запросе подтвердите открытие в Chrome.",
+    "تفتح روابط NZBLNK الآن برنامج NZB Hydra. لا تنقل مجلد التطبيق. أكّد الفتح في Chrome عند الطلب."
+  ],
+  "Bitte einen absoluten Speicherpfad auswählen.": [
+    "Bitte einen absoluten Speicherpfad auswählen.",
+    "Choose an absolute destination path.",
+    "Elige una ruta de destino absoluta.",
+    "Choisissez un chemin de destination absolu.",
+    "Укажите абсолютный путь для сохранения.",
+    "اختر مسار حفظ كاملًا."
+  ],
+  "Suche wird gestartet …": [
+    "Suche wird gestartet …",
+    "Starting search …",
+    "Iniciando búsqueda …",
+    "Démarrage de la recherche …",
+    "Начало поиска …",
+    "جارٍ بدء البحث …"
+  ],
+  "Fertig · NZB gespeichert": [
+    "Fertig · NZB gespeichert",
+    "Done · NZB saved",
+    "Listo · NZB guardado",
+    "Terminé · NZB enregistré",
+    "Готово · NZB сохранён",
+    "اكتمل · تم حفظ NZB"
+  ],
+  "Gespeichert: ": [
+    "Gespeichert: ",
+    "Saved: ",
+    "Guardado: ",
+    "Enregistré : ",
+    "Сохранено: ",
+    "تم الحفظ: "
+  ],
+  "Abgebrochen": [
+    "Abgebrochen",
+    "Cancelled",
+    "Cancelado",
+    "Annulé",
+    "Отменено",
+    "تم الإلغاء"
+  ],
+  "Die Suche wurde abgebrochen.": [
+    "Die Suche wurde abgebrochen.",
+    "The search was cancelled.",
+    "La búsqueda se ha cancelado.",
+    "La recherche a été annulée.",
+    "Поиск отменён.",
+    "تم إلغاء البحث."
+  ],
+  "NZB konnte nicht erstellt werden": [
+    "NZB konnte nicht erstellt werden",
+    "Could not create NZB",
+    "No se pudo crear el NZB",
+    "Impossible de créer le NZB",
+    "Не удалось создать NZB",
+    "تعذر إنشاء NZB"
+  ],
+  "Hydra konnte die Aktion nicht abschließen. Bitte die Startdiagnose prüfen.": [
+    "Hydra konnte die Aktion nicht abschließen. Bitte die Startdiagnose prüfen.",
+    "Hydra could not complete the action. Check the startup log.",
+    "Hydra no pudo completar la acción. Revisa el registro de inicio.",
+    "Hydra n’a pas pu terminer l’action. Consultez le journal de démarrage.",
+    "Hydra не удалось завершить действие. Проверьте журнал запуска.",
+    "تعذر على Hydra إكمال العملية. راجع سجل بدء التشغيل."
+  ],
+  "Bitte genau einen vollständigen NZBLNK-Link einfügen.": [
+    "Bitte genau einen vollständigen NZBLNK-Link einfügen.",
+    "Paste exactly one complete NZBLNK link.",
+    "Pega un único enlace NZBLNK completo.",
+    "Collez un seul lien NZBLNK complet.",
+    "Вставьте одну полную ссылку NZBLNK.",
+    "ألصق رابط NZBLNK كاملًا واحدًا فقط."
+  ],
+  "Der Link muss mit nzblnk:? oder nzblnk://? beginnen.": [
+    "Der Link muss mit nzblnk:? oder nzblnk://? beginnen.",
+    "The link must start with nzblnk:? or nzblnk://?.",
+    "El enlace debe empezar por nzblnk:? o nzblnk://?.",
+    "Le lien doit commencer par nzblnk:? ou nzblnk://?.",
+    "Ссылка должна начинаться с nzblnk:? или nzblnk://?.",
+    "يجب أن يبدأ الرابط بـ nzblnk:? أو nzblnk://?."
+  ],
+  "Der Link enthält keine gültigen Suchparameter.": [
+    "Der Link enthält keine gültigen Suchparameter.",
+    "The link has no valid search parameters.",
+    "El enlace no contiene parámetros de búsqueda válidos.",
+    "Le lien ne contient aucun paramètre de recherche valide.",
+    "В ссылке нет допустимых параметров поиска.",
+    "لا يحتوي الرابط على معلمات بحث صالحة."
+  ],
+  "Im Link fehlt der Suchschlüssel (h). Bitte den vollständigen Link kopieren.": [
+    "Im Link fehlt der Suchschlüssel (h). Bitte den vollständigen Link kopieren.",
+    "The search key (h) is missing. Copy the complete link.",
+    "Falta la clave de búsqueda (h). Copia el enlace completo.",
+    "La clé de recherche (h) est absente. Copiez le lien complet.",
+    "В ссылке отсутствует ключ поиска (h). Скопируйте полную ссылку.",
+    "مفتاح البحث (h) مفقود. انسخ الرابط كاملًا."
+  ],
+  "Der Link enthält einen Parameter mehrfach: ": [
+    "Der Link enthält einen Parameter mehrfach: ",
+    "The link repeats a parameter: ",
+    "El enlace repite un parámetro: ",
+    "Le lien contient un paramètre répété : ",
+    "Параметр повторяется в ссылке: ",
+    "يحتوي الرابط على معلمة مكررة: "
+  ],
+  "Unerwartete Weiterleitung des Suchdienstes.": [
+    "Unerwartete Weiterleitung des Suchdienstes.",
+    "Unexpected redirect from the search service.",
+    "Redirección inesperada del servicio de búsqueda.",
+    "Redirection inattendue du service de recherche.",
+    "Неожиданное перенаправление сервиса поиска.",
+    "إعادة توجيه غير متوقعة من خدمة البحث."
+  ],
+  "Die Antwort des Suchdienstes ist zu groß.": [
+    "Die Antwort des Suchdienstes ist zu groß.",
+    "The search service response is too large.",
+    "La respuesta del servicio de búsqueda es demasiado grande.",
+    "La réponse du service de recherche est trop volumineuse.",
+    "Ответ сервиса поиска слишком большой.",
+    "استجابة خدمة البحث كبيرة جدًا."
+  ],
+  "NZB laden · ": [
+    "NZB laden · ",
+    "Downloading NZB · ",
+    "Descargando NZB · ",
+    "Téléchargement NZB · ",
+    "Загрузка NZB · ",
+    "تنزيل NZB · "
+  ],
+  " KB empfangen": [
+    " KB empfangen",
+    " KB received",
+    " KB recibidos",
+    " Ko reçus",
+    " КБ получено",
+    " كيلوبايت مستلمة"
+  ],
+  "Zeitüberschreitung beim Suchdienst. Bitte erneut versuchen.": [
+    "Zeitüberschreitung beim Suchdienst. Bitte erneut versuchen.",
+    "The search service timed out. Try again.",
+    "El servicio de búsqueda agotó el tiempo de espera. Inténtalo de nuevo.",
+    "Le service de recherche a dépassé le délai. Réessayez.",
+    "Время ожидания сервиса поиска истекло. Повторите попытку.",
+    "انتهت مهلة خدمة البحث. حاول مرة أخرى."
+  ],
+  "Suchdienst antwortet mit HTTP ": [
+    "Suchdienst antwortet mit HTTP ",
+    "Search service returned HTTP ",
+    "El servicio devolvió HTTP ",
+    "Le service a renvoyé HTTP ",
+    "Сервис поиска вернул HTTP ",
+    "أعادت خدمة البحث HTTP "
+  ],
+  ". Bitte später erneut versuchen.": [
+    ". Bitte später erneut versuchen.",
+    ". Please try again later.",
+    ". Inténtalo de nuevo más tarde.",
+    ". Réessayez plus tard.",
+    ". Повторите попытку позже.",
+    ". حاول مرة أخرى لاحقًا."
+  ],
+  "Suchdienst nicht erreichbar. Bitte Internetverbindung prüfen.": [
+    "Suchdienst nicht erreichbar. Bitte Internetverbindung prüfen.",
+    "Cannot reach the search service. Check your internet connection.",
+    "No se puede acceder al servicio. Comprueba tu conexión a Internet.",
+    "Service de recherche inaccessible. Vérifiez votre connexion Internet.",
+    "Сервис поиска недоступен. Проверьте подключение к интернету.",
+    "تعذر الوصول إلى خدمة البحث. تحقق من اتصال الإنترنت."
+  ],
+  "Der Suchdienst konnte die Anfrage nicht verarbeiten.": [
+    "Der Suchdienst konnte die Anfrage nicht verarbeiten.",
+    "The search service could not process the request.",
+    "El servicio no pudo procesar la solicitud.",
+    "Le service n’a pas pu traiter la demande.",
+    "Сервис поиска не смог обработать запрос.",
+    "تعذر على خدمة البحث معالجة الطلب."
+  ],
+  "Unbekanntes Antwortformat des Suchdienstes.": [
+    "Unbekanntes Antwortformat des Suchdienstes.",
+    "Unrecognized search service response format.",
+    "Formato de respuesta del servicio desconocido.",
+    "Format de réponse du service inconnu.",
+    "Неизвестный формат ответа сервиса поиска.",
+    "تنسيق استجابة خدمة البحث غير معروف."
+  ],
+  "Die Antwort ist keine standardkonforme NZB-Datei.": [
+    "Die Antwort ist keine standardkonforme NZB-Datei.",
+    "The response is not a standard NZB file.",
+    "La respuesta no es un archivo NZB estándar.",
+    "La réponse n’est pas un fichier NZB conforme.",
+    "Ответ не является стандартным файлом NZB.",
+    "الاستجابة ليست ملف NZB مطابقًا للمعيار."
+  ],
+  "Unerwartetes XML-Format innerhalb der NZB.": [
+    "Unerwartetes XML-Format innerhalb der NZB.",
+    "Unexpected XML structure in the NZB.",
+    "Estructura XML inesperada en el NZB.",
+    "Structure XML inattendue dans le NZB.",
+    "Неожиданная структура XML в NZB.",
+    "بنية XML غير متوقعة داخل NZB."
+  ],
+  "Die NZB enthält keine Dateien.": [
+    "Die NZB enthält keine Dateien.",
+    "The NZB contains no files.",
+    "El NZB no contiene archivos.",
+    "Le NZB ne contient aucun fichier.",
+    "NZB не содержит файлов.",
+    "لا يحتوي NZB على ملفات."
+  ],
+  "NZB enthält Dateien, die nicht zum Suchschlüssel passen.": [
+    "NZB enthält Dateien, die nicht zum Suchschlüssel passen.",
+    "The NZB contains files that do not match the search key.",
+    "El NZB contiene archivos que no coinciden con la clave de búsqueda.",
+    "Le NZB contient des fichiers ne correspondant pas à la clé de recherche.",
+    "NZB содержит файлы, не соответствующие ключу поиска.",
+    "يحتوي NZB على ملفات لا تطابق مفتاح البحث."
+  ],
+  "NZB-Datei ohne Poster.": [
+    "NZB-Datei ohne Poster.",
+    "NZB file has no poster.",
+    "El archivo NZB no tiene remitente.",
+    "Le fichier NZB n’indique aucun expéditeur.",
+    "В файле NZB не указан отправитель.",
+    "لا يوجد ناشر في ملف NZB."
+  ],
+  "Ungültiges Artikeldatum.": [
+    "Ungültiges Artikeldatum.",
+    "Invalid article date.",
+    "Fecha del artículo no válida.",
+    "Date d’article invalide.",
+    "Недопустимая дата статьи.",
+    "تاريخ المقالة غير صالح."
+  ],
+  "NZB-Datei ohne Newsgroup.": [
+    "NZB-Datei ohne Newsgroup.",
+    "NZB file has no newsgroup.",
+    "El archivo NZB no tiene grupo de noticias.",
+    "Le fichier NZB n’indique aucun groupe de discussion.",
+    "В файле NZB не указана группа новостей.",
+    "لا توجد مجموعة أخبار في ملف NZB."
+  ],
+  "NZB-Datei ohne Segmente.": [
+    "NZB-Datei ohne Segmente.",
+    "NZB file has no segments.",
+    "El archivo NZB no tiene segmentos.",
+    "Le fichier NZB ne contient aucun segment.",
+    "Файл NZB не содержит сегментов.",
+    "لا يحتوي ملف NZB على مقاطع."
+  ],
+  "Ungültige oder doppelte NZB-Segmente.": [
+    "Ungültige oder doppelte NZB-Segmente.",
+    "Invalid or duplicate NZB segments.",
+    "Segmentos NZB no válidos o duplicados.",
+    "Segments NZB invalides ou dupliqués.",
+    "Недопустимые или повторяющиеся сегменты NZB.",
+    "مقاطع NZB غير صالحة أو مكررة."
+  ],
+  "Mindestens eine Datei hat fehlende NZB-Segmente.": [
+    "Mindestens eine Datei hat fehlende NZB-Segmente.",
+    "At least one file has missing NZB segments.",
+    "Faltan segmentos NZB en al menos un archivo.",
+    "Au moins un fichier présente des segments NZB manquants.",
+    "Как минимум в одном файле отсутствуют сегменты NZB.",
+    "يوجد ملف واحد على الأقل تنقصه مقاطع NZB."
+  ],
+  "Die NZB ist unvollständig: Segmente fehlen.": [
+    "Die NZB ist unvollständig: Segmente fehlen.",
+    "The NZB is incomplete: segments are missing.",
+    "El NZB está incompleto: faltan segmentos.",
+    "Le NZB est incomplet : des segments manquent.",
+    "NZB неполный: отсутствуют сегменты.",
+    "ملف NZB غير مكتمل: توجد مقاطع مفقودة."
+  ],
+  "Dateien prüfen · ": [
+    "Dateien prüfen · ",
+    "Validating files · ",
+    "Verificando archivos · ",
+    "Validation des fichiers · ",
+    "Проверка файлов · ",
+    "التحقق من الملفات · "
+  ],
+  "Die NZB ist unvollständig: Dateien fehlen.": [
+    "Die NZB ist unvollständig: Dateien fehlen.",
+    "The NZB is incomplete: files are missing.",
+    "El NZB está incompleto: faltan archivos.",
+    "Le NZB est incomplet : des fichiers manquent.",
+    "NZB неполный: отсутствуют файлы.",
+    "ملف NZB غير مكتمل: توجد ملفات مفقودة."
+  ],
+  "Zu viele Dateien mit demselben Namen im Zielordner.": [
+    "Zu viele Dateien mit demselben Namen im Zielordner.",
+    "Too many files with the same name in the destination folder.",
+    "Hay demasiados archivos con el mismo nombre en la carpeta de destino.",
+    "Trop de fichiers portent ce nom dans le dossier de destination.",
+    "В папке назначения слишком много файлов с таким именем.",
+    "يوجد عدد كبير جدًا من الملفات بالاسم نفسه في مجلد الحفظ."
+  ],
+  "NZBIndex durchsuchen · Seite ": [
+    "NZBIndex durchsuchen · Seite ",
+    "Searching NZBIndex · Page ",
+    "Buscando en NZBIndex · Página ",
+    "Recherche NZBIndex · Page ",
+    "Поиск в NZBIndex · Страница ",
+    "البحث في NZBIndex · صفحة "
+  ],
+  "Kein vollständiger Treffer bei NZBIndex. Die Version unterstützt derzeit diesen Suchdienst; nicht jeder Beitrag ist dort indexiert.": [
+    "Kein vollständiger Treffer bei NZBIndex. Die Version unterstützt derzeit diesen Suchdienst; nicht jeder Beitrag ist dort indexiert.",
+    "No complete match on NZBIndex. This version currently supports only this service; not every post is indexed there.",
+    "No hay coincidencias completas en NZBIndex. Esta versión solo admite este servicio; no todas las publicaciones están indexadas.",
+    "Aucun résultat complet sur NZBIndex. Cette version ne prend en charge que ce service ; toutes les publications n’y sont pas indexées.",
+    "В NZBIndex нет полного совпадения. Эта версия поддерживает только этот сервис; не все публикации в нём индексируются.",
+    "لم يُعثر على نتيجة كاملة في NZBIndex. يدعم هذا الإصدار هذه الخدمة فقط، ولا تُفهرس فيها جميع المنشورات."
+  ],
+  "Passenden Treffer laden …": [
+    "Passenden Treffer laden …",
+    "Loading matching result …",
+    "Cargando resultado coincidente …",
+    "Chargement du résultat correspondant …",
+    "Загрузка подходящего результата …",
+    "جارٍ تحميل النتيجة المطابقة …"
+  ],
+  "Treffer passt nicht oder ist unvollständig. Nächsten prüfen …": [
+    "Treffer passt nicht oder ist unvollständig. Nächsten prüfen …",
+    "Result does not match or is incomplete. Checking the next one …",
+    "El resultado no coincide o está incompleto. Comprobando el siguiente …",
+    "Résultat non conforme ou incomplet. Vérification du suivant …",
+    "Результат не подходит или неполный. Проверка следующего …",
+    "النتيجة غير مطابقة أو غير مكتملة. جارٍ التحقق من التالية …"
+  ],
+  "Geprüfte NZB speichern …": [
+    "Geprüfte NZB speichern …",
+    "Saving validated NZB …",
+    "Guardando NZB verificado …",
+    "Enregistrement du NZB validé …",
+    "Сохранение проверенного NZB …",
+    "جارٍ حفظ NZB الذي تم التحقق منه …"
+  ],
+  "Gespeichert · ": [
+    "Gespeichert · ",
+    "Saved · ",
+    "Guardado · ",
+    "Enregistré · ",
+    "Сохранено · ",
+    "تم الحفظ · "
+  ],
+  " Dateien · Standard-NZB": [
+    " Dateien · Standard-NZB",
+    " files · Standard NZB",
+    " archivos · NZB estándar",
+    " fichiers · NZB standard",
+    " файлов · Стандартный NZB",
+    " ملفات · NZB قياسي"
+  ],
+  "Die gefundenen NZBs haben die Vollständigkeitsprüfung nicht bestanden.": [
+    "Die gefundenen NZBs haben die Vollständigkeitsprüfung nicht bestanden.",
+    "The matching NZBs failed completeness validation.",
+    "Los NZB encontrados no superaron la verificación de integridad.",
+    "Les NZB trouvés n’ont pas passé la vérification d’intégralité.",
+    "Найденные NZB не прошли проверку полноты.",
+    "لم تجتز ملفات NZB الموجودة فحص الاكتمال."
+  ],
+  "Die Suche wurde nach drei Minuten beendet. Bitte erneut versuchen.": [
+    "Die Suche wurde nach drei Minuten beendet. Bitte erneut versuchen.",
+    "The search stopped after three minutes. Try again.",
+    "La búsqueda se detuvo después de tres minutos. Inténtalo de nuevo.",
+    "La recherche a été arrêtée après trois minutes. Réessayez.",
+    "Поиск остановлен через три минуты. Повторите попытку.",
+    "توقف البحث بعد ثلاث دقائق. حاول مرة أخرى."
+  ],
+  "Sprache": [
+    "Sprache",
+    "Language",
+    "Idioma",
+    "Langue",
+    "Язык",
+    "اللغة"
+  ],
+  "Standardprogramm für .nzb": [
+    "Standardprogramm für .nzb",
+    "Default app for .nzb",
+    "Aplicación predeterminada para .nzb",
+    "Application par défaut pour .nzb",
+    "Приложение по умолчанию для .nzb",
+    "التطبيق الافتراضي لملفات .nzb"
+  ]
+}
