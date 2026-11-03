@@ -2,7 +2,7 @@
 
 # NZB Kestrel
 
-A Windows and Linux app that turns NZBLNK links into validated NZB files, with a black-and-red interface, live progress, and support for your preferred NZB downloader.
+A Windows and Linux app that turns NZBLNK links into validated NZB files, live progress, and support for your preferred NZB downloader.
 
 ## Features
 
